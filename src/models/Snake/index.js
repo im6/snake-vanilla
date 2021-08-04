@@ -1,8 +1,5 @@
 /* eslint no-underscore-dangle: "off" */
-import {
-  INIT_DIRECTION,
-  SNAKE_INIT_LENGTH,
-} from '../../constant';
+import { INIT_DIRECTION, SNAKE_INIT_LENGTH } from '../../constant';
 
 class Snake {
   constructor() {
@@ -31,7 +28,10 @@ class Snake {
   }
 
   changeDirection(newDir) {
-    if (this.previousDirection.x === newDir.x * -1 || this.previousDirection.y === newDir.y * -1
+    if (
+      !this.previousDirection ||
+      this.previousDirection.x === newDir.x * -1 ||
+      this.previousDirection.y === newDir.y * -1
     ) {
       return;
     }
