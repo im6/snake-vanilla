@@ -16,10 +16,6 @@ beforeAll(() => {
 });
 
 describe('App object', () => {
-  test('instantiation', () => {
-    const s0 = new App({});
-    expect(s0).toBe(app);
-  });
   test('showGameOver', () => {
     app.showGameOver('over');
     expect(app.ctx.font).toBe('30px Play');

@@ -1,8 +1,8 @@
 import './style.scss';
-import SnakeApp from './models/App';
+import createGame from './models/App/createGame';
 import { GAME_INTERVAL, CANVAS_DOM_ID } from './constant';
 
-const app = new SnakeApp({
+const app = createGame({
   startBtnElem: document.getElementById('gameStartBtn'),
   scoreElem: document.getElementById('scoreText'),
   canvasElem: document.getElementById(CANVAS_DOM_ID),

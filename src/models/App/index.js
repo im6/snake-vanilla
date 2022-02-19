@@ -18,15 +18,8 @@ import {
 const canvasWidth = CANVAS_WIDTH * BOX_SIZE;
 const canvasHeight = CANVAS_HEIGHT * BOX_SIZE;
 
-const appKey = Symbol('singleton');
-const singleton = {};
-
-class SnakeApp {
+class App {
   constructor({ startBtnElem, scoreElem, canvasElem }) {
-    if (appKey in singleton) {
-      return singleton[appKey];
-    }
-
     this.startBtnElem = startBtnElem;
     this.scoreElem = scoreElem;
 
@@ -36,7 +29,6 @@ class SnakeApp {
     this.snake = null;
     this.food = null;
     this.gameOver = true;
-    singleton[appKey] = this;
   }
 
   initCanvas(canvasElem) {
@@ -111,4 +103,4 @@ class SnakeApp {
   }
 }
 
-export default SnakeApp;
+export default App;

@@ -34,8 +34,9 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
   ],
   devServer: {
-    contentBase: './docs', // set 'public' path, relative to root
-    noInfo: true,
+    static: {
+      directory: path.join(__dirname, '../docs'),
+    },
     hot: true,
     port,
     host: 'localhost',
