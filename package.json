@@ -1,5 +1,5 @@
 {
-  "name": "vanilla-snake",
+  "name": "snake-vanilla",
   "version": "1.2.0",
   "description": "A snake game with vanilla javascript",
   "main": "/src/main.js",
@@ -13,7 +13,7 @@
     "lint",
     "test"
   ],
-  "repository": "git+https://github.com/im6/vanilla-snake.git",
+  "repository": "git+https://github.com/im6/snake-vanilla.git",
   "keywords": [
     "snake",
     "es6",
